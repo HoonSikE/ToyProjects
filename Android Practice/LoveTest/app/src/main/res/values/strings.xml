@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoveTest</string>
+    <string name="main_title">Let\'s find out your\nlove type!</string>
+    <string name="question">Question\nQuestionQuestion\nQuestionQuestionQuestion\nQuestionQuestionQuestionQuestion</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
