@@ -1,8 +1,8 @@
 package com.example.myapplications1
 
 fun main(){
-//    helloWorld()
-//    println(add(4, 5))
+    helloWorld()
+    println(add(4, 5))
     // 3. String Template
     var name = "HanHoon"
     var lastName = "Park"
