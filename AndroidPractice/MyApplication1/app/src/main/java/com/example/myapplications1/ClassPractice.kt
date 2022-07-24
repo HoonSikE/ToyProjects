@@ -5,7 +5,9 @@ package com.example.myapplications1
 
 // java처럼 생성자를 만들어주지않고 아래처럼 하면 자동으로 된다.
 //class Human constructor(val name : String = "Anonymouse"){
-class Human (val name : String = "Anonymouse"){
+
+// 상속 시 앞에 open을 써줘야한다!!!!!!
+open class Human (val name : String = "Anonymouse"){
 
     // constructor(부생성자는 항상 주생성자의 위임을 받아야한다. -> this)
     constructor(name : String, age : Int) : this(name){
@@ -21,6 +23,22 @@ class Human (val name : String = "Anonymouse"){
     fun eatingCake(){
         println("This is so YUMMYYYY~~~~")
     }
+
+    // override 하려면 open 필요
+    open fun singASong(){
+        println("lalala")
+    }
+}
+
+// 상속 (상속 받을 클래스에 open을 써줘야한다)
+class Korean : Human(){
+    // override 하려면 open 필요
+    override fun singASong(){
+        super.singASong()
+        println("라라라")
+        // Human 상속을 할떄 name에 "Anonymouse"를 Default값으로 주기 때문에 가능하다.
+        println("my name is :${name}")
+    }
 }
 
 fun main() {
@@ -32,6 +50,13 @@ fun main() {
 
     human.eatingCake()
 
+    val human2 = Human("human2", 57)
+
     println("This human's name is ${human.name}")
     println("Stranger name is ${stranger.name}")
+
+    // 여기부터 상속
+    println("\n여기부터 상속")
+    val korean = Korean()
+    korean.singASong()
 }
