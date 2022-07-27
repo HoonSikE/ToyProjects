@@ -49,6 +49,7 @@ class SelectionFragment : Fragment(), View.OnClickListener {
     }
 
     fun navigateWithIndex(index : Int){
+        // "index"라는 키로 index를 관리하겠다
         val bundle = bundleOf("index" to index)
 
         navController.navigate(R.id.action_selectionFragment_to_resultFragment,bundle)
