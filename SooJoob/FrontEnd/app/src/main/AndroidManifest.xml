@@ -27,7 +27,7 @@
     반면에 일반 프로젝트와 같은 경우 아래와 같이 <meta-data> 태그 안에 api key를 작성하면 된다.-->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyA8AYf6E-DjAcUkruYC9f0xNwGarfzzWN0" />
+            android:value="" />
     </application>
 
 </manifest>
