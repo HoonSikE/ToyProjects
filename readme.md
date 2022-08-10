@@ -1,6 +1,6 @@
 # Toy Project!!!
 
-  ## 1. Android Project!
+  ## 1. Android Project
 
   > [Joyce](https://www.youtube.com/watch?v=IDVnZPjRCYg)
 
