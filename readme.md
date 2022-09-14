@@ -13,3 +13,6 @@
 
   ## 4. FireBase
   > [FireBase](https://firebase.google.com/docs?hl=ko)
+
+  ## 5. FireBase Cloud FireStore CRUD
+  > [FireStore CRUD](https://www.youtube.com/watch?v=trjltSUDqnI&list=PLhhNsarqV6MQ-eMvAOwjuBUDm7hfsTUta&index=8)
