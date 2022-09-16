@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/multicampus/Documents/GitHub/ToyProjects/FireBaseCrud/app/src/main/res/layout/activity_main.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/multicampus/Documents/GitHub/ToyProjects/FireBaseCrud/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/multicampus/Documents/GitHub/ToyProjects/FireBaseCrud/app/src/main/res/layout/activity_show.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/multicampus/Documents/GitHub/ToyProjects/FireBaseCrud/app/src/main/res/layout/item.xml" value="0.5526041666666667" />
       </map>
     </option>
   </component>
