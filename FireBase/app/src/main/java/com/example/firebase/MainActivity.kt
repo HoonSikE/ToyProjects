@@ -72,6 +72,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun firebaseAuthWithGoogle(idToken: String) {
+        println("firebaseAuthWithGoogle")
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
@@ -89,6 +90,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateUI(user: FirebaseUser?) {
+        println("update UI")
         if (user != null) {
             val intent = Intent(applicationContext, GoogleSignInActivity::class.java)
             intent.putExtra(EXTRA_NAME, user.displayName)
