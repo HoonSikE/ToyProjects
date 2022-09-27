@@ -103,13 +103,27 @@ class MainActivity : AppCompatActivity() {
 
     private fun saveToFireStore(id : String, number : Long, title: String, desc : String){
         if(!title.isEmpty() && !desc.isEmpty()){
-            var map = HashMap<String, Any>()
-            map.put("id", id)
-            map.put("number", number)
-            map.put("title", title)
-            map.put("desc", desc)
+//            var map = HashMap<String, Any>()
+//            map.put("id", id)
+//            map.put("number", number)
+//            map.put("title", title)
+//            map.put("desc", desc)
 
-            db.collection("Documents").document(id).set(map)
+            var map3 = HashMap<String, Any>()
+            map3.put("id", id)
+            map3.put("number", number)
+            map3.put("title", title)
+            map3.put("desc", desc)
+
+            var map2 = HashMap<String, HashMap<String, Any>>()
+            map2.put("1", map3)
+            map2.put("2", map3)
+
+            var map = HashMap<String, HashMap<String, HashMap<String, Any>>>()
+            map.put("taxilist", map2)
+
+/*//            db.collection("Documents").document(id).set(map)
+            db.collection("Documents").document("7e31d3d3-c91c-48aa-926b-8adba622b564").set(map)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "Data Saved !!", Toast.LENGTH_SHORT).show()
@@ -120,6 +134,18 @@ class MainActivity : AppCompatActivity() {
                     } else {
 //                        ToastMaker.getInstance().getHandler().sendEmptyMessage(2)
 //                        goSignUp()
+                    }
+
+                }.addOnFailureListener { task ->
+                    Toast.makeText(this, "Failed !!", Toast.LENGTH_SHORT).show()
+                }*/
+
+            db.collection("Documents").document("7e31d3d3-c91c-48aa-926b-8adba622b564").update("taxilist.2.desc", desc)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "Data Updated !!", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this, "Error : " + task.exception?.message, Toast.LENGTH_SHORT).show()
                     }
 
                 }.addOnFailureListener { task ->

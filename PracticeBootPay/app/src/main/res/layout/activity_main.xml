@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/purple_200"
+        android:onClick="DefaultPayment"
+        android:text="1. PG일반 테스트"
+        android:textColor="#fff"
+        app:layout_constraintBaseline_toTopOf="parent"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="#4529e5"
+        android:onClick="TotalPayment"
+        android:text="2. 통합결제 테스트"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@id/btn_1"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/purple_200"
+        android:onClick="SubscriptionPayment"
+        android:text="3. 정기결제 테스트 (인증)"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@id/btn_2"
+        tools:layout_editor_absoluteX="20dp" />
+
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/purple_200"
+        android:onClick="SubscriptionBootpayPayment"
+        android:text="4. 정기결제 테스트 (비인증)"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@id/btn_3"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:onClick="Authentication"
+        android:text="5. 본인인증 테스트"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@id/btn_4"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:onClick="PasswordPayment"
+        android:text="6. 비밀번호 결제 테스트"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@id/btn_5"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <Button
+        android:id="@+id/btn_7"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/purple_200"
+        android:onClick="WebAppPayment"
+        android:text="7. 웹앱으로 연동하기"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@id/btn_6"
+        tools:layout_editor_absoluteX="20dp" />
+
+
+    <Button
+        android:id="@+id/btn_8"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:onClick="BioPayment"
+        android:text="8. 생체인증 결제테스트"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@id/btn_7"
+        tools:layout_editor_absoluteX="20dp" />
+
+
+    <Button
+        android:id="@+id/btn_9"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:onClick="PasswordUIPayment"
+        android:text="9. 비밀번호UI 결제테스트"
+        android:textColor="#fff"
+        app:layout_constraintTop_toBottomOf="@id/btn_8"
+        tools:layout_editor_absoluteX="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
