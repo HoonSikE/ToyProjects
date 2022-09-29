@@ -27,12 +27,11 @@ class TotalPaymentActivity: AppCompatActivity() {
 
     fun PaymentTest(v: View?) {
         val extra = BootExtra()
-            .setCardQuota("0,2,3") // 일시불, 2개월, 3개월 할부 허용, 할부는 최대 12개월까지 사용됨 (5만원 이상 구매시 할부허용 범위)
+//            .setCardQuota("0,2,3") // 일시불, 2개월, 3개월 할부 허용, 할부는 최대 12개월까지 사용됨 (5만원 이상 구매시 할부허용 범위)
+            .setCardQuota("0") // 일시불
         val items: MutableList<BootItem> = ArrayList()
-        val item1 = BootItem().setName("마우's 스").setId("ITEM_CODE_MOUSE").setQty(1).setPrice(50.0)
-        val item2 = BootItem().setName("키보드").setId("ITEM_KEYBOARD_MOUSE").setQty(1).setPrice(50.0)
+        val item1 = BootItem().setName("~~~ㅌ").setId("ITEM_CODE_MOUSE").setQty(1).setPrice(100.0)
         items.add(item1)
-        items.add(item2)
         val payload = Payload()
 
         payload.setApplicationId(applicationId)
