@@ -81,7 +81,7 @@ class MapsActivity : AppCompatActivity(), GoogleMap.OnMyLocationButtonClickListe
         // .alpha(0.7f) -> 불투명도
 //        googleMap.addMarker(MarkerOptions().position(iwc).alpha(0.7f))
         //
-        googleMap.addMarker(MarkerOptions().position(iwc).icon(BitmapDescriptorFactory.fromBitmap(R.drawable.boy)))
+//        googleMap.addMarker(MarkerOptions().position(iwc).icon(BitmapDescriptorFactory.fromBitmap(R.drawable.boy)))
 
 
 
@@ -153,14 +153,14 @@ class MapsActivity : AppCompatActivity(), GoogleMap.OnMyLocationButtonClickListe
 //        uisettings.setRotateGesturesEnabled(false)
 
         // 현재위치(내위치)로 이동 버튼 활성화
-        googleMap.isMyLocationEnabled = true
+//        googleMap.isMyLocationEnabled = true
         // 사용자가 내 위치 버튼을 클릭하면 앱이 GoogleMap.OnMyLocationButtonClickListener에서 onMyLocationButtonClick() 콜백을 수신
         googleMap.setOnMyLocationButtonClickListener(this)
         // 사용자가 내 위치의 파란색 점을 클릭하면 앱이 GoogleMap.OnMyLocationClickListener에서 onMyLocationClick() 콜백을 수신
         googleMap.setOnMyLocationClickListener(this)
         // 내 위치 레이어와 내 위치 버튼을 사용하면 지도에 사용자의 현재 위치를 표시할 수 있습니다.
         // 지도에 내 위치 레이어를 사용 설정하려면 googleMap.isMyLocationEnabled()를 호출
-//        enableMyLocation()
+        enableMyLocation()
     }
 
     // 사용자가 다중선을 클릭할 때마다 실선과 점선 간의 패턴을 변경함
