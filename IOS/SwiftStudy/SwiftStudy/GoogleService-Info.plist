@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyC1xcJp9s_Y3vocXalQrmMBBOjf1Ji4uX0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>54171705153</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.goldenplanet.SwiftStudy</string>
+	<key>PROJECT_ID</key>
+	<string>swiftstudy-d7731</string>
+	<key>STORAGE_BUCKET</key>
+	<string>swiftstudy-d7731.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:54171705153:ios:aa987d11f4555d69498bc0</string>
+</dict>
+</plist>
