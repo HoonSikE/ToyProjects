@@ -1,0 +1,6 @@
+framework module Pods_GaBasic {
+  umbrella header "Pods-GaBasic-umbrella.h"
+
+  export *
+  module * { export * }
+}
