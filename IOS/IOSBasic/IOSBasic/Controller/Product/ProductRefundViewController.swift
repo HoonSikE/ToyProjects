@@ -27,6 +27,8 @@ class ProductRefundViewController : UIViewController{
         Analytics.logEvent(AnalyticsEventScreenView, parameters: gaData)  // 화면 데이터 전송
         
         complete_Purchase()
+        
+        AnalyticsEventCampaignDetails
     }
     // 구매 완료
     func complete_Purchase(){

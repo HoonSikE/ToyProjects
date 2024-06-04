@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA4 Web Test</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <script src="js/script.js"></script>
+</head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WPC9HDZQ');</script>
+<!-- End Google Tag Manager -->
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPC9HDZQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <div class="title">
+        SPA 형식이라고 가정
+    </div>
+    <hr>
+    <div>
+        <div class="contents">
+           ● 페이지 (자동)
+        </div>
+        <div class="a">
+            <span class="b" onclick="pageView()">
+                페이지뷰 테스트<br>
+                (PageView)
+            </span>
+            <span class="b">
+                스크롤 테스트<br>
+                (ScrollView)
+            </span>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div class="contents">
+            ● 데이터 레이어
+        </div>
+        <div class="a">
+            <span class="b" onclick="getDataLayer()">
+                데이터 레이어 조회<br>
+                (get)
+            </span>
+            <span class="b" onclick="setDataLayer()">
+                데이터 레이어 입력<br>
+                (push)
+            </span>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div class="contents">
+            ● 이벤트
+        </div>
+        <div class="a">
+            <span class="b" onclick="clickTest()">
+                클릭 이벤트 테스트<br>
+                (Click)
+            </span>
+            <span class="b" onclick="clickTest2()">
+                클릭 이벤트 테스트2<br>
+                (Click)
+            </span>
+            <span class="b" onclick="pageMoveTest()">
+                페이지 이동 클릭 테스트<br>
+                (PageMove)
+            </span>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div class="contents">
+            ● 전자 상거래
+        </div>
+        <div class="a">
+            <span class="b" onclick="SelectItem()">
+                상품 클릭 테스트<br>
+                (SelectItem)
+            </span>
+        </div>
+        <div class="a">
+            <span class="b" onclick="ViewItem()">
+                상품 상세 정보 전송<br>
+                (ViewItem)
+            </span>
+            <span class="b" onclick="AddToWishlist()">
+                위시 리스트<br>
+                (AddToWishlist)
+            </span>
+            <span class="b" onclick="AddToCart()">
+                장바구니 담기<br>
+                (AddToCart)
+            </span>
+            <span class="b" onclick="BeginCheckout()">
+                상품 구매<br>
+                (BeginCheckout)
+            </span>
+            <span class="b" onclick="ViewCart()">
+                장바구니 상세 정보<br>
+                (ViewCart)
+            </span>
+            <span class="b" onclick="RemoveFromCart()">
+                장바구니 제거<br>
+                (RemoveFromCart)
+            </span>
+        </div>
+        <div class="a">
+            <span class="b" onclick="AddPaymentInfo()">
+                상품 결제<br>
+                (AddPaymentInfo)
+            </span>
+        </div>
+        <div class="a">
+            <span class="b" onclick="Purchase()">
+                구매 완료<br>
+                (Purchase)
+            </span>
+            <span class="b" onclick="Refund()">
+                상품 환불<br>
+                (Refund)
+            </span>
+        </div>
+    </div>
+</body>
+</html>
