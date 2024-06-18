@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		930845B52C16A6E700FEEDCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930845B42C16A6E700FEEDCF /* AppDelegate.swift */; };
+		930845B72C16A6E700FEEDCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930845B62C16A6E700FEEDCF /* SceneDelegate.swift */; };
+		930845B92C16A6E700FEEDCF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930845B82C16A6E700FEEDCF /* ViewController.swift */; };
+		930845BC2C16A6E700FEEDCF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 930845BB2C16A6E700FEEDCF /* Base */; };
+		930845BE2C16A6E900FEEDCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930845BD2C16A6E900FEEDCF /* Assets.xcassets */; };
+		930845C12C16A6E900FEEDCF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 930845C02C16A6E900FEEDCF /* Base */; };
+		930845CC2C16C14300FEEDCF /* GA4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930845CB2C16C14300FEEDCF /* GA4.swift */; };
+		930845D02C16C2F100FEEDCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 930845CF2C16C2F100FEEDCF /* GoogleService-Info.plist */; };
+		A15C719C605687A75745BCC0 /* Pods_GoldenMallWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2470A28AB0D9ED1D04AE8FA /* Pods_GoldenMallWebView.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		76DC3F188B8D3A2B1434CA0D /* Pods-GoldenMallWebView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenMallWebView.release.xcconfig"; path = "Target Support Files/Pods-GoldenMallWebView/Pods-GoldenMallWebView.release.xcconfig"; sourceTree = "<group>"; };
+		930845B12C16A6E700FEEDCF /* GoldenMallWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenMallWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		930845B42C16A6E700FEEDCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		930845B62C16A6E700FEEDCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		930845B82C16A6E700FEEDCF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		930845BB2C16A6E700FEEDCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		930845BD2C16A6E900FEEDCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		930845C02C16A6E900FEEDCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		930845C22C16A6E900FEEDCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		930845CB2C16C14300FEEDCF /* GA4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GA4.swift; sourceTree = "<group>"; };
+		930845CF2C16C2F100FEEDCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E76A0B55CA364772D199D30A /* Pods-GoldenMallWebView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenMallWebView.debug.xcconfig"; path = "Target Support Files/Pods-GoldenMallWebView/Pods-GoldenMallWebView.debug.xcconfig"; sourceTree = "<group>"; };
+		F2470A28AB0D9ED1D04AE8FA /* Pods_GoldenMallWebView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenMallWebView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		930845AE2C16A6E700FEEDCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A15C719C605687A75745BCC0 /* Pods_GoldenMallWebView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		624C39F8AD7B490E24AFC246 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E76A0B55CA364772D199D30A /* Pods-GoldenMallWebView.debug.xcconfig */,
+				76DC3F188B8D3A2B1434CA0D /* Pods-GoldenMallWebView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		930845A82C16A6E700FEEDCF = {
+			isa = PBXGroup;
+			children = (
+				930845B32C16A6E700FEEDCF /* GoldenMallWebView */,
+				930845B22C16A6E700FEEDCF /* Products */,
+				624C39F8AD7B490E24AFC246 /* Pods */,
+				B98185772E640C91D8CC2B7E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		930845B22C16A6E700FEEDCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				930845B12C16A6E700FEEDCF /* GoldenMallWebView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		930845B32C16A6E700FEEDCF /* GoldenMallWebView */ = {
+			isa = PBXGroup;
+			children = (
+				930845CA2C16C13900FEEDCF /* Interface */,
+				930845B42C16A6E700FEEDCF /* AppDelegate.swift */,
+				930845B62C16A6E700FEEDCF /* SceneDelegate.swift */,
+				930845B82C16A6E700FEEDCF /* ViewController.swift */,
+				930845BA2C16A6E700FEEDCF /* Main.storyboard */,
+				930845BD2C16A6E900FEEDCF /* Assets.xcassets */,
+				930845BF2C16A6E900FEEDCF /* LaunchScreen.storyboard */,
+				930845C22C16A6E900FEEDCF /* Info.plist */,
+				930845CF2C16C2F100FEEDCF /* GoogleService-Info.plist */,
+			);
+			path = GoldenMallWebView;
+			sourceTree = "<group>";
+		};
+		930845CA2C16C13900FEEDCF /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				930845CB2C16C14300FEEDCF /* GA4.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		B98185772E640C91D8CC2B7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2470A28AB0D9ED1D04AE8FA /* Pods_GoldenMallWebView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		930845B02C16A6E700FEEDCF /* GoldenMallWebView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 930845C52C16A6E900FEEDCF /* Build configuration list for PBXNativeTarget "GoldenMallWebView" */;
+			buildPhases = (
+				7EC132B7A126EC430A6485B5 /* [CP] Check Pods Manifest.lock */,
+				930845AD2C16A6E700FEEDCF /* Sources */,
+				930845AE2C16A6E700FEEDCF /* Frameworks */,
+				930845AF2C16A6E700FEEDCF /* Resources */,
+				6CFED3FA49CD240948F3116B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoldenMallWebView;
+			productName = GoldenMallWebView;
+			productReference = 930845B12C16A6E700FEEDCF /* GoldenMallWebView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		930845A92C16A6E700FEEDCF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					930845B02C16A6E700FEEDCF = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 930845AC2C16A6E700FEEDCF /* Build configuration list for PBXProject "GoldenMallWebView" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 930845A82C16A6E700FEEDCF;
+			productRefGroup = 930845B22C16A6E700FEEDCF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				930845B02C16A6E700FEEDCF /* GoldenMallWebView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		930845AF2C16A6E700FEEDCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				930845BE2C16A6E900FEEDCF /* Assets.xcassets in Resources */,
+				930845D02C16C2F100FEEDCF /* GoogleService-Info.plist in Resources */,
+				930845C12C16A6E900FEEDCF /* Base in Resources */,
+				930845BC2C16A6E700FEEDCF /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6CFED3FA49CD240948F3116B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenMallWebView/Pods-GoldenMallWebView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenMallWebView/Pods-GoldenMallWebView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoldenMallWebView/Pods-GoldenMallWebView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EC132B7A126EC430A6485B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoldenMallWebView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		930845AD2C16A6E700FEEDCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				930845CC2C16C14300FEEDCF /* GA4.swift in Sources */,
+				930845B92C16A6E700FEEDCF /* ViewController.swift in Sources */,
+				930845B52C16A6E700FEEDCF /* AppDelegate.swift in Sources */,
+				930845B72C16A6E700FEEDCF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		930845BA2C16A6E700FEEDCF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				930845BB2C16A6E700FEEDCF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		930845BF2C16A6E900FEEDCF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				930845C02C16A6E900FEEDCF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		930845C32C16A6E900FEEDCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		930845C42C16A6E900FEEDCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		930845C62C16A6E900FEEDCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E76A0B55CA364772D199D30A /* Pods-GoldenMallWebView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2HJH39N2DA;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GoldenMallWebView/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.goldenmall.GoldenMallWebView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		930845C72C16A6E900FEEDCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76DC3F188B8D3A2B1434CA0D /* Pods-GoldenMallWebView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2HJH39N2DA;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GoldenMallWebView/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.goldenmall.GoldenMallWebView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		930845AC2C16A6E700FEEDCF /* Build configuration list for PBXProject "GoldenMallWebView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				930845C32C16A6E900FEEDCF /* Debug */,
+				930845C42C16A6E900FEEDCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		930845C52C16A6E900FEEDCF /* Build configuration list for PBXNativeTarget "GoldenMallWebView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				930845C62C16A6E900FEEDCF /* Debug */,
+				930845C72C16A6E900FEEDCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 930845A92C16A6E700FEEDCF /* Project object */;
+}
