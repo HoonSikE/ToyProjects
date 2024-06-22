@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         // 스크린뷰 데이터 구성
         global.defaultDict[AnalyticsParameterScreenName] = "메인 화면"
         global.defaultDict[AnalyticsParameterScreenClass] = "ViewController"
-        global.defaultDict["ep_page_name"] = "메인 화면"
+        global.defaultDict["ep_page_name"] = "메ㅁㄴㅇㄹㅁㄴㅇㄹ모ㅓㄴ앎나어럼낭로ㅓㄴㅇㄹㅁㄴㅇ러ㅁㄴㅇㄹㅁㄴㅇㄹ모ㅓㄴ앎나어럼낭로ㅓㄴㅇㄹㅁㄴㅇ러ㅁㄴㅇㄹㅁㄴㅇㄹ모ㅓㄴ앎나어럼낭로ㅓㄴㅇㄹㅁㄴㅇ러ㅁㄴㅇㄹㅁㄴㅇㄹ모ㅓㄴ앎나어럼낭로ㅓㄴㅇㄹㅁㄴㅇ러ㅁㄴㅇㄹㅁㄴㅇㄹ모ㅓㄴ앎나어럼낭로ㅓㄴㅇㄹㅁㄴㅇ러"
                
         let gaData = global.defaultDict
                 

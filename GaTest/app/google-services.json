@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "126237907124",
+    "project_id": "goldenmall-25c9c",
+    "storage_bucket": "goldenmall-25c9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126237907124:android:c458bc44e492de7ecfdfe1",
+        "android_client_info": {
+          "package_name": "com.goldenplanet.gatest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtgeeKUTh6TB69M1zBhxgcCCftCijtB1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
