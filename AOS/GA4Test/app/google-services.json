@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "33230503989",
+    "project_id": "ga4-test-42781",
+    "storage_bucket": "ga4-test-42781.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33230503989:android:f61280b34f7a218dc3b17c",
+        "android_client_info": {
+          "package_name": "com.hanhoon.ga4test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaTPWa6KjVrwD6OePPzQvPQW-viUwmOnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

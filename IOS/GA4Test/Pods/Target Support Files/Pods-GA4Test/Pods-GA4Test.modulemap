@@ -1,0 +1,6 @@
+framework module Pods_GA4Test {
+  umbrella header "Pods-GA4Test-umbrella.h"
+
+  export *
+  module * { export * }
+}

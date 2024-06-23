@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA4Test</title>
+    <script src="/js/GoogleAnalyticsBuilder.js"></script>
+    <script>
+        let pageviewObj = {
+            // 방문 페이지 제목
+            title: '메인>골든몰 홈',
+
+            // 이벤트 매개변수
+            ep_page_name: '메인>골든몰 홈',            
+            ep_visit_channel: 'PCWeb',
+            ep_login_yn: 'Y',
+            ep_dow: '화',
+
+            // 사용자 속성
+            up_uid: 'hhpark',
+            up_type: '개인',
+            up_age: '20대',
+            up_gender: 'M',
+            up_joindate: '20240604'
+        };
+        // 랜덤 숫자 생성 (0부터 9 사이)
+        let randomNumber = Math.floor(Math.random() * 10);
+
+        // 각 속성 값 뒤에 랜덤 숫자 추가
+        for (let key in pageviewObj) {
+            if (typeof pageviewObj[key] === 'string') {
+                pageviewObj[key] += randomNumber;
+            }
+        }
+
+        sendGAPage(pageviewObj);
+    </script>
+    <script src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPXWMJMZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="title">
+        GA4Test
+    </div>
+    <hr>
+    <div>
+        <div class="contents">
+           ● 페이지 (자동)
+        </div>
+        <div class="a">
+            <span class="b">
+                페이지뷰 테스트<br>
+                (PageView)
+            </span>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div class="contents">
+            ● 이벤트
+        </div>
+        <div class="a">
+            <span class="b" onclick="clickEvent()">
+                클릭 이벤트 테스트<br>
+                (Event)
+            </span>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div class="contents">
+            ● 전자 상거래
+        </div>
+        <div class="a">
+            <span class="b" onclick="ViewItemList()">
+                상품 리스트<br>
+                (ViewItemList)
+            </span>
+            <span class="b" onclick="SelectItem()">
+                상품 클릭 테스트<br>
+                (SelectItem)
+            </span>
+            <span class="b" onclick="ViewItem()">
+                상품 상세 정보 전송<br>
+                (ViewItem)
+            </span>
+            <span class="b" onclick="AddToWishlist()">
+                위시 리스트<br>
+                (AddToWishlist)
+            </span>
+            <span class="b" onclick="AddToCart()">
+                장바구니 담기<br>
+                (AddToCart)
+            </span>
+            <span class="b" onclick="ViewCart()">
+                장바구니 상세 정보<br>
+                (ViewCart)
+            </span>
+            <span class="b" onclick="RemoveFromCart()">
+                장바구니 제거<br>
+                (RemoveFromCart)
+            </span>
+            <span class="b" onclick="BeginCheckout()">
+                상품 구매<br>
+                (BeginCheckout)
+            </span>
+            <span class="b" onclick="AddShippingInfo()">
+                배송 정보 입력<br>
+                (AddShippingInfo)
+            </span>
+            <span class="b" onclick="AddPaymentInfo()">
+                상품 결제<br>
+                (AddPaymentInfo)
+            </span>
+            <span class="b" onclick="Purchase()">
+                구매 완료<br>
+                (Purchase)
+            </span>
+            <span class="b" onclick="Refund()">
+                상품 환불<br>
+                (Refund)
+            </span>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div class="contents">
+            ● 가상페이지
+        </div>
+        <div class="a">
+            <span class="b" onclick="VirPage()">
+                가상 페이지 테스트<br>
+                (VirPage)
+            </span>
+        </div>
+    </div>
+</body>
+</html>
