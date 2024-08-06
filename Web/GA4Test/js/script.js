@@ -1,6 +1,6 @@
 /** 이벤트 */
 // 상품 정보
-var productShoes1 = {
+let productShoes1 = {
     item_id: 'VANS_12345',
     item_brand: 'Vans',
     item_name: '반스 운동화 올드스쿨 블랙',
@@ -13,7 +13,7 @@ var productShoes1 = {
     quantity: 1,
     index: 0,
 };
-var productShoes2 = {
+let productShoes2 = {
     item_id: 'CROCS_67890',
     item_brand: 'Crocs',
     item_name: '바야밴드 클로그',
@@ -25,7 +25,7 @@ var productShoes2 = {
     quantity: 1,
     index: 1,
 };
-var productShirt1 = {
+let productShirt1 = {
     item_id: 'NIKE_369',
     item_brand: 'Nike',
     item_name: '나이키 스우시 반팔',
@@ -37,7 +37,7 @@ var productShirt1 = {
     quantity: 1,
     index: 2,
 };
-var productShirt2 = {
+let productShirt2 = {
     item_id: 'COMME_777',
     item_brand: '꼼데가르송',
     item_name: 'PLAY 반팔티셔츠',
@@ -49,7 +49,7 @@ var productShirt2 = {
     quantity: 1,
     index: 3,
 };
-var productDrink1 = {
+let productDrink1 = {
     item_id: 'SAM_111',
     item_brand: '삼육두유',
     item_name: '검은참깨 두유',
@@ -60,7 +60,7 @@ var productDrink1 = {
     quantity: 32,
     index: 4,
 };
-var productDrink2 = {
+let productDrink2 = {
     item_id: 'M_13579',
     item_brand: '매일유업',
     item_name: '아몬드 브리즈',
@@ -72,10 +72,10 @@ var productDrink2 = {
     index: 5,
 };
 
-function clickEvent(){
+function clickEvent(isVirtual){
     let eventObj = {
         // 이벤트 명
-        event_name: '이벤트 이름',
+        event_name: 'event_name_test',
         // 이벤트 매개변수
         ep_click_page: '이벤트 페이지',
         ep_click_area: '이벤트 영역',
@@ -83,20 +83,20 @@ function clickEvent(){
         ep_click_label: '이벤트 테스트 라벨',
     };
 
-    // 랜덤 숫자 생성 (0부터 9 사이)
-    let randomNumber = Math.floor(Math.random() * 10);
+    // // 랜덤 숫자 생성 (0부터 9 사이)
+    // let randomNumber = Math.floor(Math.random() * 10);
 
-    // 각 속성 값 뒤에 랜덤 숫자 추가
-    for (let key in eventObj) {
-        if (typeof eventObj[key] === 'string') {
-            eventObj[key] += randomNumber;
-        }
-    }
+    // // 각 속성 값 뒤에 랜덤 숫자 추가
+    // for (let key in eventObj) {
+    //     if (typeof eventObj[key] === 'string') {
+    //         eventObj[key] += randomNumber;
+    //     }
+    // }
 
-    sendGAEvent(eventObj);
+    sendGAEvent(eventObj, isVirtual);
 }
 /** 전자상거래 */
-function ViewItemList(){
+function ViewItemList(isVirtual){
     // 기본 정보
     let eventData = {
         event_name: 'view_item_list',
@@ -109,9 +109,9 @@ function ViewItemList(){
 
     let items = [productShoes1, productShoes2, productShirt1
             , productShirt2, productDrink1, productDrink2];
-    sendGAEcommerce(eventData, transaction, items);
+    sendGAEcommerce(eventData, transaction, items, isVirtual);
 }
-function SelectItem(){
+function SelectItem(isVirtual){
     // 기본 정보
     let eventData = {
         event_name: 'select_item',
@@ -124,9 +124,9 @@ function SelectItem(){
     
     let items = [productShoes1];
 
-    sendGAEcommerce(eventData, transaction, items);
+    sendGAEcommerce(eventData, transaction, items, isVirtual);
 }
-function ViewItem(){
+function ViewItem(isVirtual){
     // 기본 정보
     let eventData = {
         event_name: 'view_item',
@@ -139,9 +139,9 @@ function ViewItem(){
     
     let items = [productShoes1];
 
-    sendGAEcommerce(eventData, transaction, items);
+    sendGAEcommerce(eventData, transaction, items, isVirtual);
 }
-function AddToWishlist(){
+function AddToWishlist(isVirtual){
     // 기본 정보
     let eventData = {
         event_name: 'add_to_wishlist',
@@ -154,7 +154,7 @@ function AddToWishlist(){
     
     let items = [productShoes1];
 
-    sendGAEcommerce(eventData, transaction, items);
+    sendGAEcommerce(eventData, transaction, items, isVirtual);
 }
 function AddToCart(){
     // 기본 정보
@@ -169,9 +169,9 @@ function AddToCart(){
 
     let items = [productShoes1];
 
-    sendGAEcommerce(eventData, transaction, items);
+    sendGAEcommerce(eventData, transaction, items, isVirtual);
 }
-function ViewCart(){
+function ViewCart(isVirtual){
     // 기본 정보
     let eventData = {
         event_name: 'view_cart',
@@ -184,9 +184,9 @@ function ViewCart(){
 
     let items = [productShoes1];
 
-    sendGAEcommerce(eventData, transaction, items);
+    sendGAEcommerce(eventData, transaction, items, isVirtual);
 }
-function RemoveFromCart() {
+function RemoveFromCart(isVirtual) {
     // 기본 정보
     let eventData = {
         event_name: 'remove_from_cart',
@@ -199,9 +199,9 @@ function RemoveFromCart() {
 
     let items = [productShoes1, productShirt1];
 
-    sendGAEcommerce(eventData, transaction, items);
+    sendGAEcommerce(eventData, transaction, items, isVirtual);
 }
-function BeginCheckout(){
+function BeginCheckout(isVirtual){
     // 기본 정보
     let eventData = {
         event_name: 'begin_checkout',
@@ -214,9 +214,9 @@ function BeginCheckout(){
 
     let items = [productShoes1];
 
-    sendGAEcommerce(eventData, transaction, items);
+    sendGAEcommerce(eventData, transaction, items, isVirtual);
 }
-function AddShippingInfo(){
+function AddShippingInfo(isVirtual){
     // 기본 정보
     let eventData = {
         event_name: 'add_shipping_info',
@@ -232,9 +232,9 @@ function AddShippingInfo(){
 
     let items = [productShoes1, productShirt1];
 
-    sendGAEcommerce(eventData, transaction, items);
+    sendGAEcommerce(eventData, transaction, items, isVirtual);
 }
-function AddPaymentInfo(){
+function AddPaymentInfo(isVirtual){
     // 기본 정보
     let eventData = {
         event_name: 'add_payment_info',
@@ -250,9 +250,9 @@ function AddPaymentInfo(){
 
     let items = [productShoes1, productShirt1];
 
-    sendGAEcommerce(eventData, transaction, items);
+    sendGAEcommerce(eventData, transaction, items, isVirtual);
 }
-function Purchase(){
+function Purchase(isVirtual){
     // 기본 정보
     let eventData = {
         event_name: 'purchase',
@@ -276,9 +276,9 @@ function Purchase(){
 
     let items = [productShoes1, productShirt1];
 
-    sendGAEcommerce(eventData, transaction, items);
+    sendGAEcommerce(eventData, transaction, items, isVirtual);
 }
-function Refund(){
+function Refund(isVirtual){
     // 기본 정보
     let eventData = {
         event_name: 'refund',
@@ -302,17 +302,17 @@ function Refund(){
 
     let items = [productShoes1, productShirt1];
 
-    sendGAEcommerce(eventData, transaction, items);
+    sendGAEcommerce(eventData, transaction, items, isVirtual);
 }
 /** 가상 페이지 */
-function VirPage(){
+function VirPage1(){
     let virtualObj = {
         // 방문 페이지 제목
-        title: '메인>골든몰 홈',
-        location: 'virtual/location',
+        title: '메인>골든몰 홈>가상 페이지 1',
+        location: 'http://localhost/Page1',
 
         // 이벤트 매개변수
-        ep_page_name: '메인>골든몰 홈',            
+        ep_page_name: '메인>골든몰 홈>가상 페이지 1',
         ep_visit_channel: 'PCWeb',
         ep_login_yn: 'Y',
         ep_dow: '화',
@@ -325,13 +325,29 @@ function VirPage(){
         up_joindate: '20240604'
     };
 
-    // 랜덤 숫자 생성 (0부터 99 사이)
-    let randomNumber = Math.floor(Math.random() * 100);
+    sendGAVirPage(virtualObj);
+}
 
-    // title과 ep_page_name 속성에만 랜덤 숫자 추가
-    if (virtualObj.hasOwnProperty('location')) {
-        virtualObj.location += randomNumber;
-    }
+function VirPage2(){
+    let virtualObj = {
+        // 방문 페이지 제목
+        title: '메인>골든몰 홈>가상 페이지 2',
+        location: 'virtual/location2',
+
+        // 이벤트 매개변수
+        ep_page_name: '메인>골든몰 홈>가상 페이지 2',
+        ep_visit_channel: 'PCWeb',
+        ep_login_yn: 'Y',
+        ep_dow: '화',
+    
+        // 사용자 속성
+        up_uid: 'hhpark',
+        up_type: '개인',
+        up_age: '20대',
+        up_gender: 'M',
+        up_joindate: '20240604'
+    };
+
     sendGAVirPage(virtualObj);
 }
 

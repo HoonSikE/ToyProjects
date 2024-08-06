@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyCZoWeg-8-UC5R-oCTG2Zpvd5r8k2o7LX0</string>
+	<string>AIzaSyBRLn2UPyRJtfyd3a1sAZ6qi6oj49QKwSg</string>
 	<key>GCM_SENDER_ID</key>
-	<string>126237907124</string>
+	<string>33230503989</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.goldenmall.GoldenMallWebView</string>
+	<string>com.hanhoon.ga4test</string>
 	<key>PROJECT_ID</key>
-	<string>goldenmall-25c9c</string>
+	<string>ga4-test-42781</string>
 	<key>STORAGE_BUCKET</key>
-	<string>goldenmall-25c9c.appspot.com</string>
+	<string>ga4-test-42781.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:126237907124:ios:02b9881a77c70838cfdfe1</string>
+	<string>1:33230503989:ios:05162f95c9ddcb83c3b17c</string>
 </dict>
 </plist>

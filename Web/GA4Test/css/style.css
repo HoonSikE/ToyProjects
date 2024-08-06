@@ -30,3 +30,19 @@
     text-align: center;
     font-weight: 600;
 }
+
+.c {
+    display: inline-block;
+    margin-bottom: 16px;
+    margin-right: 8px;
+    padding: 12px;
+    background-color: rgb(255, 178, 114);
+
+    width: 180px;
+    height: 40px;
+    vertical-align: middle;
+
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}

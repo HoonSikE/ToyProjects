@@ -9,6 +9,8 @@ import UIKit
 import FirebaseAnalytics
 
 class ViewController: UIViewController {
+    let hey = AppInterface.init()
+    
     let itemDict1: [String: Any] = [
         AnalyticsParameterItemID: "VANS_12345",
         AnalyticsParameterItemBrand: "Vans",
@@ -102,158 +104,238 @@ class ViewController: UIViewController {
     @IBAction func btn_screen_view(_ sender: Any) {
         print("btn_screen_view")
         // 이벤트 매개변수
-        var screenDict = [
-            AnalyticsParameterScreenName: "메인>골든몰 홈",
+        let screenDict = [
+//            AnalyticsParameterScreenName: "메인>골든몰 홈",
+            "title": "메인>골든몰 홈",
             "ep_visit_channel": "IOS",
             "ep_login_yn": "Y",
             "ep_dow": "화",
+            
+            "up_cid": Analytics.appInstanceID(),
+            "up_uid": "hhpark",
+            
+            "cm_test": "dd",
+
+            "up_type": "개인",
+            "up_age": "20",
+            "up_gender": "M",
+            "up_joindate": "20240604",
         ]
 
         var gaData: [String: Any] = [ : ].merging(screenDict) {(_,new) in new}
         
         // 사용자 속성
-        Analytics.setUserProperty(Analytics.appInstanceID(), forName: "up_cid")
-        Analytics.setUserProperty("hhpark", forName: "up_uid")
-        Analytics.setUserID("hhparksetUserID")
-        Analytics.setUserProperty("개인", forName: "up_type")
-        Analytics.setUserProperty("20", forName: "up_age")
-        Analytics.setUserProperty("M", forName: "up_gender")
-        Analytics.setUserProperty("up_joindate", forName: "20240604")
+//        Analytics.setUserProperty(Analytics.appInstanceID(), forName: "up_cid")
+//        Analytics.setUserProperty("hhpark", forName: "up_uid")
+//        Analytics.setUserID("hhparksetUserID")
+//        Analytics.setUserProperty("개인", forName: "up_type")
+//        Analytics.setUserProperty("20", forName: "up_age")
+//        Analytics.setUserProperty("M", forName: "up_gender")
+//        Analytics.setUserProperty("20240604", forName: "up_joindate")
         
-        Analytics.logEvent(AnalyticsEventScreenView, parameters: gaData)  // 화면 데이터 전송
+//        Analytics.logEvent(AnalyticsEventScreenView, parameters: gaData)  // 화면 데이터 전송
+        hey.sendGAScreen(gaData)
     }
     
     @IBAction func btn_click_event(_ sender: Any) {
         print("btn_click_event")
         // 이벤트 매개변수
         var eventDict = [
+            "event_name": "event_name_test",
+            
             "ep_click_page": "이벤트 페이지",
             "ep_click_area": "이벤트 영역",
             "ep_click_area2": "이벤트 영역 2",
             "ep_click_label": "이벤트 테스트 라벨",
         ]
 
-        var gaData: [String: Any] = [ : ].merging(eventDict) {(_,new) in new}
+        let gaData: [String: Any] = [ : ].merging(eventDict) {(_,new) in new}
         
-        Analytics.logEvent("event_name", parameters: gaData)
+//        Analytics.logEvent("event_name_test", parameters: gaData)
+        hey.sendGAEvent(gaData)
     }
     
     @IBAction func btn_view_item_list(_ sender: Any) {
         print("btn_view_item_list")
+        let transactionDict: [String: Any] = [
+            AnalyticsParameterCurrency: "KRW",
+        ]
         
         let purchaseDict: [String: Any] = [
-            AnalyticsParameterCurrency: "KRW",
+            "event_name": AnalyticsEventViewItemList,
+            "transaction": transactionDict,
+            
             AnalyticsParameterItems: [itemDict1, itemDict2, itemDict3, itemDict4, itemDict5, itemDict6]
         ]
         
         var gaData: [String: Any] = [ : ].merging(purchaseDict) {(_,new) in new}
         
-        Analytics.logEvent(AnalyticsEventViewItemList, parameters: gaData)
+//        Analytics.logEvent(AnalyticsEventViewItemList, parameters: gaData)
+        hey.sendGAEcommerce(gaData)
     }
     @IBAction func btn_select_item(_ sender: Any) {
         print("btn_select_item")
+        let transactionDict: [String: Any] = [
+            AnalyticsParameterCurrency: "KRW",
+        ]
+        
         let purchaseDict: [String: Any] = [
+            "event_name": AnalyticsEventSelectItem,
+            "transaction": transactionDict,
+            
             AnalyticsParameterCurrency: "KRW",
             AnalyticsParameterItems: [itemDict1]
         ]
         
         var gaData: [String: Any] = [ : ].merging(purchaseDict) {(_,new) in new}
         
-        Analytics.logEvent(AnalyticsEventSelectItem, parameters: gaData)
+//        Analytics.logEvent(AnalyticsEventSelectItem, parameters: gaData)
+        hey.sendGAEcommerce(gaData)
     }
     @IBAction func btn_view_item(_ sender: Any) {
         print("btn_view_item")
-        let purchaseDict: [String: Any] = [
+        let transactionDict: [String: Any] = [
             AnalyticsParameterCurrency: "KRW",
+        ]
+        
+        let purchaseDict: [String: Any] = [
+            "event_name": AnalyticsEventViewItem,
+            "transaction": transactionDict,
+            
             AnalyticsParameterItems: [itemDict1]
         ]
         
         var gaData: [String: Any] = [ : ].merging(purchaseDict) {(_,new) in new}
         
-        Analytics.logEvent(AnalyticsEventViewItem, parameters: gaData)
+//        Analytics.logEvent(AnalyticsEventViewItem, parameters: gaData)
+        hey.sendGAEcommerce(gaData)
     }
     @IBAction func btn_add_to_wishlist(_ sender: Any) {
         print("btn_add_to_wishlist")
-        let purchaseDict: [String: Any] = [
+        let transactionDict: [String: Any] = [
             AnalyticsParameterCurrency: "KRW",
+        ]
+        
+        let purchaseDict: [String: Any] = [
+            "event_name": AnalyticsEventAddToWishlist,
+            "transaction": transactionDict,
+            
             AnalyticsParameterItems: [itemDict1]
         ]
         
         var gaData: [String: Any] = [ : ].merging(purchaseDict) {(_,new) in new}
         
-        Analytics.logEvent(AnalyticsEventAddToWishlist, parameters: gaData)
+//        Analytics.logEvent(AnalyticsEventAddToWishlist, parameters: gaData)
+        hey.sendGAEcommerce(gaData)
     }
     @IBAction func btn_add_to_cart(_ sender: Any) {
         print("btn_add_to_cart")
-        let purchaseDict: [String: Any] = [
+        let transactionDict: [String: Any] = [
             AnalyticsParameterCurrency: "KRW",
+        ]
+        
+        let purchaseDict: [String: Any] = [
+            "event_name": AnalyticsEventAddToCart,
+            "transaction": transactionDict,
+            
             AnalyticsParameterItems: [itemDict1]
         ]
         
         var gaData: [String: Any] = [ : ].merging(purchaseDict) {(_,new) in new}
         
-        Analytics.logEvent(AnalyticsEventAddToCart, parameters: gaData)
+//        Analytics.logEvent(AnalyticsEventAddToCart, parameters: gaData)
+        hey.sendGAEcommerce(gaData)
     }
     @IBAction func btn_view_cart(_ sender: Any) {
         print("btn_view_cart")
-        let purchaseDict: [String: Any] = [
+        let transactionDict: [String: Any] = [
             AnalyticsParameterCurrency: "KRW",
+        ]
+        let purchaseDict: [String: Any] = [
+            "event_name": AnalyticsEventViewCart,
+            "transaction": transactionDict,
+            
             AnalyticsParameterItems: [itemDict1]
         ]
         
         var gaData: [String: Any] = [ : ].merging(purchaseDict) {(_,new) in new}
         
-        Analytics.logEvent(AnalyticsEventViewCart, parameters: gaData)
+//        Analytics.logEvent(AnalyticsEventViewCart, parameters: gaData)
+        hey.sendGAEcommerce(gaData)
     }
     @IBAction func btn_remove_from_cart(_ sender: Any) {
         print("btn_remove_from_cart")
-        let purchaseDict: [String: Any] = [
+        let transactionDict: [String: Any] = [
             AnalyticsParameterCurrency: "KRW",
+        ]
+        let purchaseDict: [String: Any] = [
+            "event_name": AnalyticsEventRemoveFromCart,
+            "transaction": transactionDict,
+            
             AnalyticsParameterItems: [itemDict1]
         ]
         
         var gaData: [String: Any] = [ : ].merging(purchaseDict) {(_,new) in new}
         
-        Analytics.logEvent(AnalyticsEventRemoveFromCart, parameters: gaData)
+//        Analytics.logEvent(AnalyticsEventRemoveFromCart, parameters: gaData)
+        hey.sendGAEcommerce(gaData)
     }
     @IBAction func btn_begin_checkout(_ sender: Any) {
         print("btn_begin_checkout")
-        let purchaseDict: [String: Any] = [
+        let transactionDict: [String: Any] = [
             AnalyticsParameterCurrency: "KRW",
+        ]
+        let purchaseDict: [String: Any] = [
+            "event_name": AnalyticsEventBeginCheckout,
+            "transaction": transactionDict,
+            
             AnalyticsParameterItems: [itemDict1]
         ]
         
         var gaData: [String: Any] = [ : ].merging(purchaseDict) {(_,new) in new}
         
-        Analytics.logEvent(AnalyticsEventBeginCheckout, parameters: gaData)
+//        Analytics.logEvent(AnalyticsEventBeginCheckout, parameters: gaData)
+        hey.sendGAEcommerce(gaData)
     }
     @IBAction func btn_add_shipping_info(_ sender: Any) {
         print("btn_add_shipping_info")
-        let purchaseDict: [String: Any] = [
+        let transactionDict: [String: Any] = [
             AnalyticsParameterCurrency: "KRW",
             AnalyticsParameterValue: 175860.0,
             AnalyticsParameterShipping: 3000.0,
             AnalyticsParameterPaymentType: "Kakao Pay",
+        ]
+        let purchaseDict: [String: Any] = [
+            "event_name": AnalyticsEventAddShippingInfo,
+            "transaction": transactionDict,
+            
             AnalyticsParameterItems: [itemDict1, itemDict2]
         ]
         
         var gaData: [String: Any] = [ : ].merging(purchaseDict) {(_,new) in new}
         
-        Analytics.logEvent(AnalyticsEventAddShippingInfo, parameters: gaData)
+//        Analytics.logEvent(AnalyticsEventAddShippingInfo, parameters: gaData)
+        hey.sendGAEcommerce(gaData)
     }
     @IBAction func btn_add_payment_info(_ sender: Any) {
         print("btn_add_payment_info")
-        let purchaseDict: [String: Any] = [
+        let transactionDict: [String: Any] = [
             AnalyticsParameterCurrency: "KRW",
             AnalyticsParameterValue: 175860.0,
             AnalyticsParameterShipping: 3000.0,
             AnalyticsParameterPaymentType: "Kakao Pay",
+        ]
+        let purchaseDict: [String: Any] = [
+            "event_name": AnalyticsEventAddPaymentInfo,
+            "transaction": transactionDict,
+            
             AnalyticsParameterItems: [itemDict1, itemDict2]
         ]
         
         var gaData: [String: Any] = [ : ].merging(purchaseDict) {(_,new) in new}
         
-        Analytics.logEvent(AnalyticsEventAddPaymentInfo, parameters: gaData)
+//        Analytics.logEvent(AnalyticsEventAddPaymentInfo, parameters: gaData)
+        hey.sendGAEcommerce(gaData)
     }
     @IBAction func btn_purchase(_ sender: Any) {
         print("btn_purchase")
@@ -264,18 +346,24 @@ class ViewController: UIViewController {
         // 최종 transaction ID 생성
         let finalTransactionID = "\(initialTransactionID)\(randomNumber)"
         
-        let purchaseDict: [String: Any] = [
+        let transactionDict: [String: Any] = [
             AnalyticsParameterCurrency: "KRW",
             AnalyticsParameterValue: 175860.0,
             AnalyticsParameterShipping: 3000.0,
             AnalyticsParameterPaymentType: "Kakao Pay",
             AnalyticsParameterTransactionID: finalTransactionID,
+        ]
+        let purchaseDict: [String: Any] = [
+            "event_name": AnalyticsEventPurchase,
+            "transaction": transactionDict,
+            
             AnalyticsParameterItems: [itemDict1, itemDict2]
         ]
         
         var gaData: [String: Any] = [ : ].merging(purchaseDict) {(_,new) in new}
         
-        Analytics.logEvent(AnalyticsEventPurchase, parameters: gaData)
+//        Analytics.logEvent(AnalyticsEventPurchase, parameters: gaData)
+        hey.sendGAEcommerce(gaData)
     }
     @IBAction func btn_refund(_ sender: Any) {
         print("btn_refund")
@@ -286,18 +374,25 @@ class ViewController: UIViewController {
         // 최종 transaction ID 생성
         let finalTransactionID = "\(initialTransactionID)\(randomNumber)"
         
-        let purchaseDict: [String: Any] = [
+        let transactionDict: [String: Any] = [
             AnalyticsParameterCurrency: "KRW",
             AnalyticsParameterValue: 175860.0,
             AnalyticsParameterShipping: 3000.0,
             AnalyticsParameterPaymentType: "Kakao Pay",
             AnalyticsParameterTransactionID: finalTransactionID,
+        ]
+        
+        let purchaseDict: [String: Any] = [
+            "event_name": AnalyticsEventRefund,
+            "transaction": transactionDict,
+            
             AnalyticsParameterItems: [itemDict1, itemDict2]
         ]
         
         var gaData: [String: Any] = [ : ].merging(purchaseDict) {(_,new) in new}
         
-        Analytics.logEvent(AnalyticsEventRefund, parameters: gaData)
+//        Analytics.logEvent(AnalyticsEventRefund, parameters: gaData)
+        hey.sendGAEcommerce(gaData)
     }
     
 }

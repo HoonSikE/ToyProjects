@@ -17,11 +17,13 @@
             ep_dow: '화',
 
             // 사용자 속성
+            user_id: 'hhpark',
             up_uid: 'hhpark',
             up_type: '개인',
             up_age: '20대',
             up_gender: 'M',
-            up_joindate: '20240604'
+            up_joindate: '20240604',
+            
         };
         // 랜덤 숫자 생성 (0부터 9 사이)
         let randomNumber = Math.floor(Math.random() * 10);
@@ -65,7 +67,7 @@
             ● 이벤트
         </div>
         <div class="a">
-            <span class="b" onclick="clickEvent()">
+            <span class="b" onclick="clickEvent(false)">
                 클릭 이벤트 테스트<br>
                 (Event)
             </span>
@@ -77,51 +79,51 @@
             ● 전자 상거래
         </div>
         <div class="a">
-            <span class="b" onclick="ViewItemList()">
+            <span class="b" onclick="ViewItemList(false)">
                 상품 리스트<br>
                 (ViewItemList)
             </span>
-            <span class="b" onclick="SelectItem()">
+            <span class="b" onclick="SelectItem(false)">
                 상품 클릭 테스트<br>
                 (SelectItem)
             </span>
-            <span class="b" onclick="ViewItem()">
+            <span class="b" onclick="ViewItem(false)">
                 상품 상세 정보 전송<br>
                 (ViewItem)
             </span>
-            <span class="b" onclick="AddToWishlist()">
+            <span class="b" onclick="AddToWishlist(false)">
                 위시 리스트<br>
                 (AddToWishlist)
             </span>
-            <span class="b" onclick="AddToCart()">
+            <span class="b" onclick="AddToCart(false)">
                 장바구니 담기<br>
                 (AddToCart)
             </span>
-            <span class="b" onclick="ViewCart()">
+            <span class="b" onclick="ViewCart(false)">
                 장바구니 상세 정보<br>
                 (ViewCart)
             </span>
-            <span class="b" onclick="RemoveFromCart()">
+            <span class="b" onclick="RemoveFromCart(false)">
                 장바구니 제거<br>
                 (RemoveFromCart)
             </span>
-            <span class="b" onclick="BeginCheckout()">
+            <span class="b" onclick="BeginCheckout(false)">
                 상품 구매<br>
                 (BeginCheckout)
             </span>
-            <span class="b" onclick="AddShippingInfo()">
+            <span class="b" onclick="AddShippingInfo(false)">
                 배송 정보 입력<br>
                 (AddShippingInfo)
             </span>
-            <span class="b" onclick="AddPaymentInfo()">
+            <span class="b" onclick="AddPaymentInfo(false)">
                 상품 결제<br>
                 (AddPaymentInfo)
             </span>
-            <span class="b" onclick="Purchase()">
+            <span class="b" onclick="Purchase(false)">
                 구매 완료<br>
                 (Purchase)
             </span>
-            <span class="b" onclick="Refund()">
+            <span class="b" onclick="Refund(false)">
                 상품 환불<br>
                 (Refund)
             </span>
@@ -133,9 +135,81 @@
             ● 가상페이지
         </div>
         <div class="a">
-            <span class="b" onclick="VirPage()">
-                가상 페이지 테스트<br>
-                (VirPage)
+            <span class="c" onclick="VirPage1()">
+                가상 페이지 테스트1<br>
+                (VirPage1)
+            </span>
+            <span class="c" onclick="VirPage2()">
+                가상 페이지 테스트2<br>
+                (VirPage2)
+            </span>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div class="contents">
+            ● 이벤트 (가상)
+        </div>
+        <div class="a">
+            <span class="c" onclick="clickEvent(true)">
+                클릭 이벤트 테스트<br>
+                (Event)
+            </span>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div class="contents">
+            ● 전자 상거래 (가상)
+        </div>
+        <div class="a">
+            <span class="c" onclick="ViewItemList(true)">
+                상품 리스트<br>
+                (ViewItemList)
+            </span>
+            <span class="c" onclick="SelectItem(true)">
+                상품 클릭 테스트<br>
+                (SelectItem)
+            </span>
+            <span class="c" onclick="ViewItem(true)">
+                상품 상세 정보 전송<br>
+                (ViewItem)
+            </span>
+            <span class="c" onclick="AddToWishlist(true)">
+                위시 리스트<br>
+                (AddToWishlist)
+            </span>
+            <span class="c" onclick="AddToCart(true)">
+                장바구니 담기<br>
+                (AddToCart)
+            </span>
+            <span class="c" onclick="ViewCart(true)">
+                장바구니 상세 정보<br>
+                (ViewCart)
+            </span>
+            <span class="c" onclick="RemoveFromCart(true)">
+                장바구니 제거<br>
+                (RemoveFromCart)
+            </span>
+            <span class="c" onclick="BeginCheckout(true)">
+                상품 구매<br>
+                (BeginCheckout)
+            </span>
+            <span class="c" onclick="AddShippingInfo(true)">
+                배송 정보 입력<br>
+                (AddShippingInfo)
+            </span>
+            <span class="c" onclick="AddPaymentInfo(true)">
+                상품 결제<br>
+                (AddPaymentInfo)
+            </span>
+            <span class="c" onclick="Purchase(true)">
+                구매 완료<br>
+                (Purchase)
+            </span>
+            <span class="c" onclick="Refund(true)">
+                상품 환불<br>
+                (Refund)
             </span>
         </div>
     </div>

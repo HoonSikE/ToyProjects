@@ -1,6 +1,8 @@
 package com.hanhoon.ga4test
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.Firebase
@@ -140,15 +142,24 @@ class MainActivity : AppCompatActivity() {
         // 스크린뷰
         btn_screen_view.setOnClickListener{
             print("btn_screen_view")
-            // 사용자 속성
-//            mFirebaseAnalytics!!.setUserProperty(mFirebaseAnalytics.appInstanceId.toString(), "up_cid")
-//            mFirebaseAnalytics!!.setUserProperty("user_property", "사용자 속성")
-//            mFirebaseAnalytics!!.setUserProperty("hhpark", "up_uid")
-//            mFirebaseAnalytics!!.setUserId("hhparksetUserID")
-//            mFirebaseAnalytics!!.setUserProperty("개인", "up_type")
-//            mFirebaseAnalytics!!.setUserProperty("20", "up_age")
-//            mFirebaseAnalytics!!.setUserProperty("M", "up_gender")
-//            mFirebaseAnalytics!!.setUserProperty("up_joindate", "20240604")
+            // "."으로 문자열을 나누고 마지막 인덱스 값을 추출
+            val appInstanceId = mFirebaseAnalytics.appInstanceId.toString().split(".")
+            val up_cid = appInstanceId.lastOrNull().toString().replace("@", "")
+            try {
+                // 사용자 속성
+                mFirebaseAnalytics!!.setUserProperty("up_cid", up_cid)
+                mFirebaseAnalytics!!.setUserProperty("up_uid", "hhpark")
+                mFirebaseAnalytics!!.setUserId("hhparksetUserID")
+                mFirebaseAnalytics!!.setUserProperty("up_type","개인")
+                mFirebaseAnalytics!!.setUserProperty("up_age", "20")
+                mFirebaseAnalytics!!.setUserProperty("up_gender", "M")
+                mFirebaseAnalytics!!.setUserProperty("up_joindate", "20240604")
+                // log successful event and screenBundle information
+                Log.d(TAG, "mFirebaseAnalytics.appInstanceId.toString()${up_cid}")
+                Log.d(TAG, "FirebaseAnalytics setUserProperty event logged successfully")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics setUserProperty event logging error: ${e.message}")
+            }
 
             var screenBundle: Bundle = Bundle().apply {
                 putString(FirebaseAnalytics.Param.SCREEN_NAME, "메인>골든몰 홈")
@@ -157,7 +168,13 @@ class MainActivity : AppCompatActivity() {
                 putString("ep_dow", "화")
             }
 
-            mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.SCREEN_VIEW, screenBundle)
+            try {
+                mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.SCREEN_VIEW, screenBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics SCREEN_VIEW event logged successfully. screenBundle: $screenBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics SCREEN_VIEW event logging error: ${e.message}")
+            }
         }
         // 이벤트
         btn_click_event.setOnClickListener{
@@ -170,7 +187,13 @@ class MainActivity : AppCompatActivity() {
                 putString("ep_click_label", "이벤트 테스트 라벨")
             }
 
-            mFirebaseAnalytics!!.logEvent("Test_Event", eventBundle)
+            try {
+                mFirebaseAnalytics!!.logEvent("Test_Event", eventBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics logEvent event logged successfully. eventBundle: $eventBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics logEvent event logging error: ${e.message}")
+            }
         }
         // 전자 상거래
         btn_view_item_list.setOnClickListener{
@@ -182,7 +205,13 @@ class MainActivity : AppCompatActivity() {
                 putParcelableArray(FirebaseAnalytics.Param.ITEMS, arrayOf(item1Bundle, item2Bundle, item3Bundle, item4Bundle))
             }
 
-            mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.VIEW_ITEM_LIST, purchaseBundle)
+            try {
+                mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.VIEW_ITEM_LIST, purchaseBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics VIEW_ITEM_LIST event logged successfully. purchaseBundle: $purchaseBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics VIEW_ITEM_LIST event logging error: ${e.message}")
+            }
         }
         btn_select_item.setOnClickListener{
             print("btn_select_item")
@@ -193,7 +222,13 @@ class MainActivity : AppCompatActivity() {
                 putParcelableArray(FirebaseAnalytics.Param.ITEMS, arrayOf(item1Bundle))
             }
 
-            mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.SELECT_ITEM, purchaseBundle)
+            try {
+                mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.SELECT_ITEM, purchaseBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics SELECT_ITEM event logged successfully. purchaseBundle: $purchaseBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics SELECT_ITEM event logging error: ${e.message}")
+            }
         }
         btn_view_item.setOnClickListener{
             print("btn_view_item")
@@ -204,7 +239,14 @@ class MainActivity : AppCompatActivity() {
                 putParcelableArray(FirebaseAnalytics.Param.ITEMS, arrayOf(item1Bundle))
             }
 
-            mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.VIEW_ITEM, purchaseBundle)
+
+            try {
+                mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.VIEW_ITEM, purchaseBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics VIEW_ITEM event logged successfully. purchaseBundle: $purchaseBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics VIEW_ITEM event logging error: ${e.message}")
+            }
         }
         btn_add_to_wishlist.setOnClickListener{
             print("btn_add_to_wishlist")
@@ -215,7 +257,13 @@ class MainActivity : AppCompatActivity() {
                 putParcelableArray(FirebaseAnalytics.Param.ITEMS, arrayOf(item1Bundle))
             }
 
-            mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.ADD_TO_WISHLIST, purchaseBundle)
+            try {
+                mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.ADD_TO_WISHLIST, purchaseBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics ADD_TO_WISHLIST event logged successfully. purchaseBundle: $purchaseBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics ADD_TO_WISHLIST event logging error: ${e.message}")
+            }
         }
         btn_add_to_cart.setOnClickListener{
             print("btn_add_to_cart")
@@ -226,7 +274,13 @@ class MainActivity : AppCompatActivity() {
                 putParcelableArray(FirebaseAnalytics.Param.ITEMS, arrayOf(item1Bundle))
             }
 
-            mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.ADD_TO_CART, purchaseBundle)
+            try {
+                mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.ADD_TO_CART, purchaseBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics ADD_TO_CART event logged successfully. purchaseBundle: $purchaseBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics ADD_TO_CART event logging error: ${e.message}")
+            }
         }
         btn_view_cart.setOnClickListener{
             print("btn_view_cart")
@@ -237,7 +291,13 @@ class MainActivity : AppCompatActivity() {
                 putParcelableArray(FirebaseAnalytics.Param.ITEMS, arrayOf(item1Bundle))
             }
 
-            mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.VIEW_CART, purchaseBundle)
+            try {
+                mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.VIEW_CART, purchaseBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics VIEW_CART event logged successfully. purchaseBundle: $purchaseBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics VIEW_CART event logging error: ${e.message}")
+            }
         }
         btn_remove_from_cart.setOnClickListener{
             print("btn_remove_from_cart")
@@ -248,7 +308,13 @@ class MainActivity : AppCompatActivity() {
                 putParcelableArray(FirebaseAnalytics.Param.ITEMS, arrayOf(item1Bundle))
             }
 
-            mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.REMOVE_FROM_CART, purchaseBundle)
+            try {
+                mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.REMOVE_FROM_CART, purchaseBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics REMOVE_FROM_CART event logged successfully. purchaseBundle: $purchaseBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics REMOVE_FROM_CART event logging error: ${e.message}")
+            }
         }
         btn_begin_checkout.setOnClickListener{
             print("btn_begin_checkout")
@@ -259,7 +325,13 @@ class MainActivity : AppCompatActivity() {
                 putParcelableArray(FirebaseAnalytics.Param.ITEMS, arrayOf(item1Bundle))
             }
 
-            mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.BEGIN_CHECKOUT, purchaseBundle)
+            try {
+                mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.BEGIN_CHECKOUT, purchaseBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics BEGIN_CHECKOUT event logged successfully. purchaseBundle: $purchaseBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics BEGIN_CHECKOUT event logging error: ${e.message}")
+            }
         }
         btn_add_shipping_info.setOnClickListener{
             print("btn_add_shipping_info")
@@ -273,7 +345,13 @@ class MainActivity : AppCompatActivity() {
                 putParcelableArray(FirebaseAnalytics.Param.ITEMS, arrayOf(item1Bundle, item2Bundle))
             }
 
-            mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.ADD_SHIPPING_INFO, purchaseBundle)
+            try {
+                mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.ADD_SHIPPING_INFO, purchaseBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics ADD_SHIPPING_INFO event logged successfully. purchaseBundle: $purchaseBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics ADD_SHIPPING_INFO event logging error: ${e.message}")
+            }
         }
         btn_add_payment_info.setOnClickListener{
             print("btn_add_payment_info")
@@ -287,7 +365,13 @@ class MainActivity : AppCompatActivity() {
                 putParcelableArray(FirebaseAnalytics.Param.ITEMS, arrayOf(item1Bundle, item2Bundle))
             }
 
-            mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.ADD_PAYMENT_INFO, purchaseBundle)
+            try {
+                mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.ADD_PAYMENT_INFO, purchaseBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics ADD_PAYMENT_INFO event logged successfully. purchaseBundle: $purchaseBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics ADD_PAYMENT_INFO event logging error: ${e.message}")
+            }
         }
         btn_purchase.setOnClickListener{
             print("btn_purchase")
@@ -309,7 +393,13 @@ class MainActivity : AppCompatActivity() {
                 putParcelableArray(FirebaseAnalytics.Param.ITEMS, arrayOf(item1Bundle, item2Bundle))
             }
 
-            mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.PURCHASE, purchaseBundle)
+            try {
+                mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.PURCHASE, purchaseBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics PURCHASE event logged successfully. purchaseBundle: $purchaseBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics PURCHASE event logging error: ${e.message}")
+            }
         }
         btn_refund.setOnClickListener{
             print("btn_refund")
@@ -331,7 +421,14 @@ class MainActivity : AppCompatActivity() {
                 putParcelableArray(FirebaseAnalytics.Param.ITEMS, arrayOf(item1Bundle, item2Bundle))
             }
 
-            mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.REFUND, purchaseBundle)
+            try {
+                mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.REFUND, purchaseBundle)
+                // log successful event and screenBundle information
+                Log.d(TAG, "FirebaseAnalytics REFUND event logged successfully. purchaseBundle: $purchaseBundle")
+            } catch (e: Exception) {
+                Log.d(TAG, "FirebaseAnalytics REFUND event logging error: ${e.message}")
+            }
+
         }
     }
 }

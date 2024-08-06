@@ -6,14 +6,14 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if message.name == "gascriptCallbackHandler" {
             do{
+//                let hey = GA4.init()
+//                try hey.hybridData(message: message)
                 let hey = GA4.init()
                 try hey.hybridData(message: message)
             }catch let error as NSError {
                 print("Failed to load: \(error.localizedDescription)")
             }
-            
         }
-    
     }
     @IBOutlet var webviewpage: WKWebView!
     override func viewDidLoad() {
@@ -32,7 +32,9 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         webviewpage.removeFromSuperview()
         view.addSubview(webviewpage)
         
-        let urlstring = "https://goldenmall.netlify.app/"
+//        let urlstring = "https://goldenmall.netlify.app/"
+        let urlstring = "http://127.0.0.1:5500/index.html"
+        
         if let url = URL(string: urlstring){
             let urlReq = URLRequest(url: url)
             webviewpage.load(urlReq)

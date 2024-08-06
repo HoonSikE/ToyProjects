@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<head>
+    <title>골든플래닛</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PPXWMJMZ');</script>
+    <!-- End Google Tag Manager -->
+
+    <script>
+        dataLayer.push({
+            event: 'ga_event', 
+            event_name: 'click_event',
+
+            ep_variable1: '이벤트 매개변수1',
+            ep_variable2: '이벤트 매개변수2',
+
+            up_variable1: '사용자 속성1',
+            up_variable1: '사용자 속성2',
+        });
+
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXW8GPW9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <form action="" method="get">
+        <fieldset>
+            <legend>fieldset legend</legend>
+            <table border="0">
+                <tr>
+                    <td>Text</td>
+                    <td><input type="text" name="txt" size="20"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="pwd" size="20"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="button" value="button">
+                        <input type="submit" value="submit">
+                        <input type="reset"	value="reset">
+                    </td>
+                </tr>
+                <tr>
+                    <td>checkbox</td>
+                    <td>
+                        <input type="checkbox" name="check" value="checkbox1" checked>checkbox1
+                        <input type="checkbox" name="check" value="checkbox2">checkbox2
+                        <input type="checkbox" name="check" value="checkbox3">checkbox3
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="file">파일선택</label></td>
+                    <td><input type="file" accept="image/jpg, image/gif" id=”file_ID”></td>
+                </tr>
+                <tr>
+                    <td>select</td>
+                    <td>
+                    <select name="selects" size="3" multiple>
+                        <optgroup label = "optgroup1">
+                          <option value="select1">select1</option>
+                          <option value="select2">select2</option>
+                        </optgroup>
+                        <optgroup label = "optgroup2">
+                          <option value="select3">select3</option>
+                          <option value="select4">select4</option>
+                        </optgroup>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>datalist</td>
+                    <td>
+                    <input type="text" list="datalist id">
+                    <datalist id="datalist id">
+                        <option value="value1" label="label1"></option>
+                        <option value="value2" label="label2"></option>
+                        <option value="value3" label="label3"></option>
+                        <option value="value4" label="label4"></option>
+                        <option value="value5" label="label5"></option>
+                    </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>textarea</td>		
+                    <td>
+                        <textarea rows="7" cols="30" name="txtarea"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>날짜</td>
+                    <td>
+                        <input type="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td>월</td>
+                    <td>
+                        <input type="month">
+                    </td>
+                </tr>
+                <tr>
+                    <td>주</td>
+                    <td>
+                        <input type="week">
+                    </td>
+                </tr>
+                <tr>
+                    <td>시간</td>
+                    <td>
+                        <input type="time">
+                    </td>
+                </tr>
+                <tr>
+                    <td>지역시간</td>
+                    <td>
+                        <input type="datetime-local">
+                    </td>
+                </tr>
+                <tr>
+                    <td>이름</td>
+                    <td>
+                        <input type="name" input type="text" name="name" value="이름을 입력하시오"
+                        required="required" autofocus="autofocus" id="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>이메일</td>
+                    <td>
+                        <input type="email" name="mail" placeholder="이메일을 입력하시오"
+                        id=”email”>
+                    </td>
+                </tr>
+                <tr>
+                    <td>URL</td>
+                    <td>
+                        <input type="url" name="url"
+                        placeholder="URL을 입력하시오" id=”URL_ID”>
+                    </td>
+                </tr>
+                <tr>
+                    <td>전화번호</td>
+                    <td>
+                        <input type="tel" name="tel"
+                        pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}" title="###-####-####"
+                        placeholder="전화번호를 입력하시오" id="tel_ID">
+                    </td>
+                </tr>
+                <tr>
+                    <td>숫자</td>
+                    <td>
+                        <input type="number" name="number"
+                        placeholder="숫자를 입력하시오" id="number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>범위</td>
+                    <td>
+                        <input type="range" name="range" id="range">
+                    </td>
+                </tr>
+                <tr>
+                    <td>progress</td>
+                    <td>
+                        <progress value="30" max="100"></progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td>meter1</td>
+                    <td>
+                        <meter min="0" max="10" value="7" optimum="5"></meter>
+                        <meter min="0" max="10" value="2" low="3" high="8"></meter>
+                        <meter min="0" max="10" value="9" low="3" high="8"></meter>
+                    </td>
+                </tr>
+                <tr>
+                    <td>색상</td>
+                    <td>
+                        <input type="color" name="color" id="color">
+                    </td>
+                </tr>
+                <tr>
+                    <td>검색</td>
+                    <td>
+                        <input type="search" name="search" id="search">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
