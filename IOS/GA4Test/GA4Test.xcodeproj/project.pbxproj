@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3E1D3579852573E27798B930 /* Pods_GA4Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1995D1817EF8D0E62301F4B /* Pods_GA4Test.framework */; };
-		9362BC212C35275000928CF9 /* AppInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9362BC202C35275000928CF9 /* AppInterface.swift */; };
+		935645D12C69A3DE0025EA5E /* AppInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935645D02C69A3DE0025EA5E /* AppInterface.swift */; };
+		9362BC212C35275000928CF9 /* AppInterface2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9362BC202C35275000928CF9 /* AppInterface2.swift */; };
 		936E8C582C37C86100F370A2 /* GA4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E8C572C37C86100F370A2 /* GA4.swift */; };
 		93F18AD62C2726730022035F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F18AD52C2726730022035F /* AppDelegate.swift */; };
 		93F18AD82C2726730022035F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F18AD72C2726730022035F /* SceneDelegate.swift */; };
@@ -22,7 +23,8 @@
 /* Begin PBXFileReference section */
 		136EEE0B57843CEF8AC1C2EC /* Pods-GA4Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GA4Test.release.xcconfig"; path = "Target Support Files/Pods-GA4Test/Pods-GA4Test.release.xcconfig"; sourceTree = "<group>"; };
 		716685E7EFC51246B72EC0D0 /* Pods-GA4Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GA4Test.debug.xcconfig"; path = "Target Support Files/Pods-GA4Test/Pods-GA4Test.debug.xcconfig"; sourceTree = "<group>"; };
-		9362BC202C35275000928CF9 /* AppInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInterface.swift; sourceTree = "<group>"; };
+		935645D02C69A3DE0025EA5E /* AppInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInterface.swift; sourceTree = "<group>"; };
+		9362BC202C35275000928CF9 /* AppInterface2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInterface2.swift; sourceTree = "<group>"; };
 		936E8C572C37C86100F370A2 /* GA4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GA4.swift; sourceTree = "<group>"; };
 		93F18AD22C2726730022035F /* GA4Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GA4Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F18AD52C2726730022035F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,8 +61,9 @@
 		9362BC1F2C35273800928CF9 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				9362BC202C35275000928CF9 /* AppInterface.swift */,
+				9362BC202C35275000928CF9 /* AppInterface2.swift */,
 				936E8C572C37C86100F370A2 /* GA4.swift */,
+				935645D02C69A3DE0025EA5E /* AppInterface.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -225,10 +228,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				936E8C582C37C86100F370A2 /* GA4.swift in Sources */,
+				935645D12C69A3DE0025EA5E /* AppInterface.swift in Sources */,
 				93F18ADA2C2726730022035F /* ViewController.swift in Sources */,
 				93F18AD62C2726730022035F /* AppDelegate.swift in Sources */,
 				93F18AD82C2726730022035F /* SceneDelegate.swift in Sources */,
-				9362BC212C35275000928CF9 /* AppInterface.swift in Sources */,
+				9362BC212C35275000928CF9 /* AppInterface2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

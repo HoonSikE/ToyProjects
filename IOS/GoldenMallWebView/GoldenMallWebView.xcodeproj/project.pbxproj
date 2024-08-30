@@ -13,10 +13,8 @@
 		930845BC2C16A6E700FEEDCF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 930845BB2C16A6E700FEEDCF /* Base */; };
 		930845BE2C16A6E900FEEDCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930845BD2C16A6E900FEEDCF /* Assets.xcassets */; };
 		930845C12C16A6E900FEEDCF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 930845C02C16A6E900FEEDCF /* Base */; };
-		930845CC2C16C14300FEEDCF /* GA4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930845CB2C16C14300FEEDCF /* GA4.swift */; };
 		930845D02C16C2F100FEEDCF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 930845CF2C16C2F100FEEDCF /* GoogleService-Info.plist */; };
 		93A23D1A2C36465900D26C14 /* AppInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A23D192C36465900D26C14 /* AppInterface.swift */; };
-		93C82B942C46350E006726DB /* GAInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C82B932C46350E006726DB /* GAInterface.swift */; };
 		A15C719C605687A75745BCC0 /* Pods_GoldenMallWebView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2470A28AB0D9ED1D04AE8FA /* Pods_GoldenMallWebView.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +28,8 @@
 		930845BD2C16A6E900FEEDCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		930845C02C16A6E900FEEDCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		930845C22C16A6E900FEEDCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		930845CB2C16C14300FEEDCF /* GA4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GA4.swift; sourceTree = "<group>"; };
 		930845CF2C16C2F100FEEDCF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		93A23D192C36465900D26C14 /* AppInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInterface.swift; sourceTree = "<group>"; };
-		93C82B932C46350E006726DB /* GAInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAInterface.swift; sourceTree = "<group>"; };
 		E76A0B55CA364772D199D30A /* Pods-GoldenMallWebView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenMallWebView.debug.xcconfig"; path = "Target Support Files/Pods-GoldenMallWebView/Pods-GoldenMallWebView.debug.xcconfig"; sourceTree = "<group>"; };
 		F2470A28AB0D9ED1D04AE8FA /* Pods_GoldenMallWebView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenMallWebView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,8 +92,6 @@
 		930845CA2C16C13900FEEDCF /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				930845CB2C16C14300FEEDCF /* GA4.swift */,
-				93C82B932C46350E006726DB /* GAInterface.swift */,
 				93A23D192C36465900D26C14 /* AppInterface.swift */,
 			);
 			path = Interface;
@@ -227,12 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				930845CC2C16C14300FEEDCF /* GA4.swift in Sources */,
 				93A23D1A2C36465900D26C14 /* AppInterface.swift in Sources */,
 				930845B92C16A6E700FEEDCF /* ViewController.swift in Sources */,
 				930845B52C16A6E700FEEDCF /* AppDelegate.swift in Sources */,
 				930845B72C16A6E700FEEDCF /* SceneDelegate.swift in Sources */,
-				93C82B942C46350E006726DB /* GAInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

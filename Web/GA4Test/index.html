@@ -36,6 +36,74 @@
         }
 
         sendGAPage(pageviewObj);
+
+
+// 기존
+dataLayer.push({
+    "event_name": "click_event",
+    "data_link_category": "click",
+    "data_link_action": "header",
+    "data_link_label": "{{buttonTitle}}",
+    "data_link_page": "common"
+});
+
+// 현대 자동차
+dataLayer.push({
+    "event": {
+        "name": "click_event"
+    },
+    "data": {
+        "link": {
+            "category": "click",
+            "action": "header",
+            "label": "{{buttonTitle}}",
+            "page": "common"
+        }
+    }
+});
+
+// 기존
+dataLayer.push({
+    "event_name": "click_event",
+    "data_link_category": "click",
+    "data_link_action": "{{sectionTitle}}",
+    "data_link_label": "{{buttonTitle}}",
+    "data_link_page": "vehicle_tab_{{tabTitle}}",
+    "data_link_title": "{{altTitle}}",
+    "models_code": "{{modelCode}}",
+    "models_name": "{{modelName}}",
+    "video_title_custom": undefined,
+    "video_url_custom": undefined,
+});
+
+// 현대 자동차
+dataLayer.push({
+    "event": {
+        "name": "click_event"
+    },
+    "data": {
+        "link": {
+            "category": "click",
+            "action": "{{sectionTitle}}",
+            "label": "{{buttonTitle}}",
+            "page": "vehicle_tab_{{tabTitle}}",
+            "title": "{{altTitle}}"
+        }
+    },
+    "models": {
+        "code": "{{modelCode}}",
+        "name": "{{modelName}}"
+    },
+    "video": {
+        "title": {
+            "custom": "undefined",
+        },
+        "url":{
+            "custom": "undefined",
+        }
+    }
+});
+
     </script>
     <script src="/js/script.js"></script>
     <link rel="stylesheet" href="/css/style.css" type="text/css" />

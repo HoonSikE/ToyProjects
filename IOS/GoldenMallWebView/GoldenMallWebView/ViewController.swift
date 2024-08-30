@@ -6,12 +6,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if message.name == "gascriptCallbackHandler" {
             do{
-//                let hey = GA4.init()
-//                try hey.hybridData(message: message)
-                let hey = GA4.init()
-                try hey.hybridData(message: message)
-            }catch let error as NSError {
-                print("Failed to load: \(error.localizedDescription)")
+                let gaAppInterface = AppInterface.init()
+                gaAppInterface.hybridData(message: message)
             }
         }
     }
